@@ -2,3 +2,4 @@
 //= wow.min.js
 //= jquery.maskedinput.js
 //= parallax.js
+//= apimaps.js

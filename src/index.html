@@ -6,13 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Ремонт компьютеров в Москве и МО</title>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<!-- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="css/main.css">
+	
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +26,7 @@
   //= parts/8section.html
   //= parts/modal.html
 
-
+<link rel="stylesheet" href="css/main.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -81,12 +75,12 @@
     });
   </script>
   <script>
-    new WOW().init();
+      new WOW().init();
   </script>
   <script type="text/javascript">
-  jQuery(function($){
-     $(".form-phone").mask("+7 (999) 999-9999",{completed:function(){alert("Вы ввели: "+this.val());}});
-  });
+    jQuery(function($){
+       $(".form-phone").mask("+7 (999) 999-9999",{completed:function(){alert("Вы ввели: "+this.val());}});
+    });
   </script>
   <script>
     $(document).ready(function() {
@@ -135,39 +129,39 @@
     });
   </script>
 <script type="text/javascript">
-//создаем переменные "Карта" и "Метка"
-  ymaps.ready(init);
-  var myMap, 
-  myPlacemark;
+  //создаем переменные "Карта" и "Метка"
+    ymaps.ready(init);
+    var myMap, 
+    myPlacemark;
 
-//Инициализируем нашу карту, задав ей координаты, устанавливаем масштаб карты
-  function init(){ 
-    myMap = new ymaps.Map("map", {
-      center: [55.681301, 37.672927],
-      zoom: 16,
-    }); 
+  //Инициализируем нашу карту, задав ей координаты, устанавливаем масштаб карты
+    function init(){ 
+      myMap = new ymaps.Map("map", {
+        center: [55.681301, 37.672927],
+        zoom: 16,
+      }); 
 
-//Пишем свойства для нашей метки
-    myPlacemark = new ymaps.Placemark([55.681301, 37.672927], {
-      hintContent: 'НАШ АДРЕС: Москва, м.Коломенская, ул. Судостроительная д 17 к 1',
-      balloonContent: ''
-    }, {
-            // Опции.
-            hideIcon: false,
-            // Необходимо указать данный тип макета. Показываем что это изображение.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки. Указываем путь до картинки
-            iconImageHref: '../img/flag.png',
-            // Размеры метки. 
-            iconImageSize: [128, 128],
-            // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
-            iconImageOffset: [0, -120]
-          });            
-    //Добавляем метку на карту + убираем скролл мышкой 
-    console.log(myPlacemark);
-    myMap.geoObjects.add(myPlacemark);  
-    myMap.behaviors.disable('scrollZoom');
-  }
+  //Пишем свойства для нашей метки
+      myPlacemark = new ymaps.Placemark([55.681301, 37.672927], {
+        hintContent: 'НАШ АДРЕС: Москва, м.Коломенская, ул. Судостроительная д 17 к 1',
+        balloonContent: ''
+      }, {
+              // Опции.
+              hideIcon: false,
+              // Необходимо указать данный тип макета. Показываем что это изображение.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки. Указываем путь до картинки
+              iconImageHref: '../img/flag.png',
+              // Размеры метки. 
+              iconImageSize: [128, 128],
+              // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
+              iconImageOffset: [0, -120]
+            });            
+      //Добавляем метку на карту + убираем скролл мышкой 
+      console.log(myPlacemark);
+      myMap.geoObjects.add(myPlacemark);  
+      myMap.behaviors.disable('scrollZoom');
+    }
 </script>
 <script  type="text/javascript">
   var toggle = document.getElementById('toggle'),
