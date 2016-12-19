@@ -1,0 +1,123 @@
+@import '../css/normalize.min.css';
+@import '../css/bootstrap.min.css';
+
+
+/* fonts */
+.open-semi {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+.open-reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+/* base config */
+@base-black: #706b73;
+@black: #211a18;
+@white: #ffffff;
+@blue: #4170a4;
+@bg-grey: #aeaeae;
+.row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* custom functions */
+.rounded(@radius) {
+	border-radius: @radius; 
+}
+.transform(@transform) {
+	transform: translateY(@transform);
+}
+.rotate(@deg) {
+	transform: rotate(@deg);
+}
+.rotate-and-translate(@deg, @translateY) {
+	transform: rotate(@deg) translateX(@translateY);
+}
+.box-shadow {
+	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
+
+/* general settings */
+body {
+	.open-reg;
+	min-width: 320px !important;
+}
+input, button, textarea {
+	outline: none;
+	border: none;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus, a:focus, a:hover {
+	outline: none;
+}
+/* service classes*/
+.service-header {
+	text-transform: uppercase;
+	font-size: 36px;
+	.open-semi;
+	text-align: center;
+	p {
+		.open-reg;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		font-size: 20px;
+		color: @black;
+	}
+}
+.gradient{
+	min-height: 75px;
+	color: white;
+	background: repeating-linear-gradient(
+	    45deg,
+	    #4170A4,
+	    #4170A4 10px,
+	    lighten(@blue, 20%) 10px,
+	    lighten(@blue, 20%) 20px
+	  );
+	margin: 50px auto;
+	.box-shadow;
+}
+.link-btn {
+	white-space: nowrap;
+	padding: 15px 35px;
+	background-color: @white;
+	margin: 10px 10px;
+	.open-semi;
+	font-weight: 700;
+	color: @blue;
+	border: 3px solid @blue;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: background-color 0.5s ease-out;
+	border-radius: 50px;
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+		background-color: @blue;
+		color: @white;
+	}
+}
+// .vertical-align {
+//     display: flex;
+//     align-items: center;
+// }
+
+
+@import "elements/1section.less";
+@import "elements/2section.less";
+@import "elements/3section.less";
+@import "elements/4section.less";
+@import "elements/5section.less";
+@import "elements/6section.less";
+@import "elements/7section.less";
+@import "elements/8section.less";
+@import 'easy-input.less';
+@import 'elements/modal.less';
+@import "mobile";
